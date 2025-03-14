@@ -1,26 +1,26 @@
-package hw00;
-public class Place {
-    private String zip;
-    private String town;
-    private String state;
+//package hw01;
 
-    public Place(String zip, String town, String state) {
+public class Place {
+    protected String zip;
+    protected String city;
+    protected String state;
+
+    public Place(String zip, String city, String state) {
         this.zip = zip;
-        this.town = town;
+        this.city = city;
         this.state = state;
     }
-    public String getZip() {
-        return zip;
-    }
+
+    public String getZip() { return zip; }
+    public String getCity() { return city; }
+    public String getState() { return state; }
+    
     public String getTown() {
-        return town;
-    }
-    public String getState() {
-        return state;
+        return getCity();
     }
 
     @Override
-    public String toString() {
-        return town + " " + state;
+    public String toString() { 
+        return city + ", " + state; 
     }
 }
